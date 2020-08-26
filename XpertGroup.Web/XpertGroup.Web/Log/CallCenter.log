@@ -1,0 +1,7 @@
+2020-08-26 12:28:57,349 [11] ERROR XpertGroup Web - Error validando el encabezado de la conversacion: CONVERSACIONl 4
+2020-08-26 12:29:46,256 [7] ERROR XpertGroup Web - Error validando el encabezado de la conversacion: CONVERSACIONl 4
+2020-08-26 12:31:24,426 [14] ERROR XpertGroup Web - Error validando el encabezado de la conversacion: CONVERSACIONl 4
+2020-08-26 12:32:34,718 [20] ERROR XpertGroup Web - Error validando el encabezado de la conversacion: CONVERSACIONl 4
+2020-08-26 12:32:34,720 [20] ERROR XpertGroup Web - Error validando el formato del mensaje: '11:58:455 ASESOR3: Con mucho gusto lo atenderemos.' de la conversacion: CONVERSACION 3
+2020-08-26 12:37:46,916 [20] ERROR XpertGroup Web - Error validando el encabezado de la conversacion: CONVERSACIONl 4
+2020-08-26 12:37:46,929 [20] ERROR XpertGroup Web - Error validando el formato del mensaje: '11:58:455 ASESOR3: Con mucho gusto lo atenderemos.' de la conversacion: CONVERSACION 3

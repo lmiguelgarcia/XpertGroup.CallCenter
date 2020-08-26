@@ -1,0 +1,56 @@
+﻿@using XpertGroup.Entidades
+@model List<XpertGroup.Entidades.Conversacion>
+@{
+    ViewData["Title"] = "Call Center";
+}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+@*<h1>CALL CENTER LMGARCIA</h1>*@
+<div class="container">
+    <form asp-controller="CallCenter" asp-action="UploadFile" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="archivo">Archivo de conversaciones:</label>
+            <input type="file" name="file" class="form-control-file" />
+        </div>
+
+        <button type="submit" class="btn btn-default">Cargar</button>
+    </form>
+</div>
+<br />
+<div class="accordion" id="accordionExample">
+    @{int i = 0;}
+    @foreach (var item in Model)
+    {
+        i++;
+        <div class="card">
+            <div class="card-header" id="heading@(i)">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#col@(i)">@item.Nombre</button>
+                    @for (int j = 0; j < item.Calificacion; j++)
+                    {
+                        <span class="glyphicon glyphicon-star"></span>
+                    }
+                    @for (int j = item.Calificacion; j < 5; j++)
+                    {
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    }
+                </h2>
+            </div>
+            <div id="col@(i)" class="collapse" aria-labelledby="heading@(i)" data-parent="#accordionExample">
+                <div class="card-body">
+                    @foreach (var linea in item.Lineas)
+                    {
+                        <p>@linea.Fecha.Hour:@linea.Fecha.Minute:@linea.Fecha.Second @linea.Emisor: @linea.Mensaje</p>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<script>
+    $(function () {
+        $("#accordion").accordion({
+            collapsible: true
+        });
+    });
+</script>

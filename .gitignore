@@ -337,7 +337,7 @@ ASALocalRun/
 .localhistory/
 
 # ARCHIVOS del log
-XpertGroup.Web/Log
+XpertGroup.Web/XpertGroup.Web/Log
 
 # BeatPulse healthcheck temp database
 healthchecksdb

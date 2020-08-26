@@ -29,6 +29,11 @@ namespace XpertGroup.Web.Controllers
             return View(new List<Conversacion>());
         }
 
+        public IActionResult UploadFile()
+        {
+            return View("Index",new List<Conversacion>());
+        }
+
         [HttpPost]
         public IActionResult UploadFile(IFormFile file)
         {
@@ -52,12 +57,7 @@ namespace XpertGroup.Web.Controllers
             catch
             {
                 return View("Error");
-            }            
-        }
-
-        public IActionResult Error()
-        {
-            return View();
+            }
         }
     }
 }
